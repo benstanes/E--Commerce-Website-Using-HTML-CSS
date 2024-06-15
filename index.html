@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BeautyRide</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://kit.fontawesome.com/bbba08e2b7.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+      <!-- header Starts Here -->
+        <header class="header">
+          <h1 class="logo">Beauty<span>Ride</span></h1>
+          <!-- <div class="row">
+          <div class="col-6 col-s-9"> -->
+            <ul class="nav">
+                <li class="nav-content"><a class="active" id="home" href="#home">Car Interiors</a></li>
+                <li class="nav-content"><a class="active" href="#news">Car Exteriors</a></li>
+                <li class="nav-content"><a class="active" href="#contact">Car Care & Styling</a></li>
+                <li class="nav-content"><a class="active" href="#about">Bike Accessories</a></li>
+                <li class="nav-content"><a class="active" href="#about">Bulk BUY</a></li>
+                <li class="nav-content"><a class="active" href="#about">Sign In</a></li>
+            </ul>
+           <!-- </div> -->
+           <!-- <div class="col-3 col-s-12"> -->
+            <ul class="user-content">
+                <li class=""><img src="images\icons\profile.PNG" alt="Profile" width="25px" /></li>
+                <li class=""><img src="data:image/jpeg;base64,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" alt="Purchase"
+                        width="30px"
+                        height="30px"
+                    />
+                </li>
+            </ul>
+          <!-- </div>
+        </div> -->
+        </header>
+
+        <!-- Slider Section Starts Here -->
+        <section class="slider">
+          <div class="slider-image">
+              <img src="images\accessories\exteriors1.png" alt="" width="" height="320px">
+              <div class="slider-content">
+                  <h2 class="sub-title">New Accessories collection</h2>
+                  <h2 class="title">Modern Exteriors</h2>
+                  <a href="#" class="btn">Explore Products  <i class='fas fa-arrow-right'></i></a>
+              </div>
+          </div>
+        </section>
+
+        <!--Fle Container Starts Here-->
+        <section class="categories">
+          <div class="title-section">
+            <h3 class="sub-title">Shop By Categories</h3>
+            <h3 class="title">Decor collection</h3>
+          </div>
+            <div class="All-accessories">
+                <div class="accessory">
+                    <img src="images\accessories\exteriors-2.jpg" alt="living room" width="215" height="270" />
+                    <!-- First Banner -->
+                    <div class="accessory-content">
+                        <h4>Exteriors</h4>
+                        <h5>12 Rooms</h5>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="accessory">
+                    <img src="images\accessories\interiors.jpg" alt="living room" width="210" height="190" />
+                    <div class="accessory-content">
+                        <h4>Interiors</h4>
+                        <h5>12 Items</h5>
+                    </div>
+                </div>
+                <div class="accessory">
+                    <img src="images\accessories\golden-wrapped-car.jpg" alt="living room" width="215" height="270" />
+                    <div class="accessory-content">
+                        <h4>Car Styling</h4>
+                        <h5>12 Items</h5>
+                    </div>
+                </div>
+                <div class="accessory">
+                    <img src="images\accessories\bike-accessories.webp" alt="living room" width="210" height="190" />
+                    <div class="accessory-content">
+                        <h4>Bike Accessories</h4>
+                        <h5>12 Items</h5>
+                    </div>
+                </div>
+                <div class="accessory">
+                    <img src="images\accessories\delivery.jpg" alt="living room" width="215" height="270" />
+                    <div class="accessory-content">
+                        <h4>New Delivery</h4>
+                        <h5>12 Items</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <!-- car section -->
+        <section class="car-categories">
+            <div class="title-section">
+                <h3 class="sub-title">Car Accessories</h3>
+                <h3 class="title">Car companies</h3>
+            </div>
+            <div class="All-brands">
+                <div class="brand">
+                    <img src="images\brands\suzuki.jpg" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\hyundai-img-2.jpg" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\kia.jpeg" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\mahindra.png" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\tata-img-3.png" alt="living room" />
+                </div>
+            </div>
+        </section>
+
+        <!-- bike section -->
+        <section class="bike-categories">
+            <div class="title-section">
+                <h3 class="sub-title">Bike Accessories</h3>
+                <h3 class="title">Bike companies</h3>
+            </div>
+            <div class="All-brands">
+                <div class="brand">
+                    <img src="images\brands\hero1.jpg" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\RE2.jpg" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\tvs.jpg" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\ktm1.jpg" alt="living room" />
+                </div>
+                <div class="brand">
+                    <img src="images\brands\honda1.jpg" alt="living room" />
+                </div>
+            </div>
+        </section>
+
+        <!-- FOoter starts here -->
+        <footer class="footer">
+            <div class="footer-logo">
+              <h2 class="footer-logo-design">Beauty<span>Ride</span></h2>
+            </div>
+            <div class="copyright">©2024. All Rights Reserved</div>
+            <div class="footer-links">
+                <a class="footer-links-1">Terms and Conditions</a>
+                <a class="footer-links-2">Privacy Policy</a>
+            </div>
+        </footer>
+    </body>
+</html>
