@@ -1,54 +1,10 @@
 /* Common */
 * {
-  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  /* border: 1px dashed red; */
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-
-/* for mobile */
-[class*="col-"]{
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
 
 body{
 	font-family: "Plus Jakarta Sans";
@@ -92,6 +48,7 @@ body{
   font-family: Impact;
   color: red;
 }
+
 .nav {
   display: flex;
   list-style-type: none;
@@ -134,6 +91,7 @@ body{
 /* slider */
 .slider{
   background-image: url("images/slider/background-img-4.jpg");
+  background-size: cover;
   background-position: 55% center;
   display:flex;
   margin:0px 10px ;
@@ -145,6 +103,11 @@ body{
   padding: 150px 40px;
   position: relative;
 }
+.slider-image img{
+  max-width: 50%;
+  height: auto;
+}
+
 .slider .sub-title{
   position: relative;
   font-size: 18px;
@@ -220,15 +183,112 @@ body{
 .categories{
   padding:30px 0px;
 }
-.All-accessories{
-  display:flex;
-  justify-content: space-around;
+
+.All-accessories,.All-brands{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
 }
-.accessory{
+.accessory,.brand{
+  display: flex;
+  border: 0;
+  margin: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
   position: relative;
   overflow: hidden;
   border-radius: 4px;
+}
+@media screen and (max-width: 1025px) {
+  .accessory,.brand {
+    width: 30%;
+  }
+  .accessory>.accessory-content{
+    flex-shrink: 2;
+    right: 102px;
+    left: 24px;
+    bottom: 30px;
+  }
+  .title{
+    letter-spacing: -3px;
+    font-size: 40px !important;
+  }
+  .accessory>img {
+    width: 300px;
+    height: 300px;
+  }
+  .brand img {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .accessory,.brand {
+    width: 100%;
+  }
+  .accessory{
+    width: 300px;
+    height: 300px;
+  }
+  .accessory>img {
+    width: 300px;
+    height: 300px;
+  }
+  .brand img {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .accessory>.accessory-content{
+    left: 14px !important;
+    right: 14px !important;
+  }
+  .slider-image img{
+    display: none;
+  }
+  .slider-content{
+    padding: 0px 6px 0px 143px;
+    line-height: 0.9;
+  }
+  .slider .title{
+    line-height: 0.9;
+    padding: 10px 10px 5px 20px;
+    letter-spacing: -1px;
+  }
+  .nav{
+    display: none;
+  }
+  .title-section>.sub-title {
+    padding-top: 1px !important;
+  }
+  .title-section>.title {
+    margin-bottom: 1px !important;
+  }
+  .slider-image{
+    padding: 151px 21px;
+  }
+  .footer-logo-design{
+    font-size: 15px !important;
+    padding: 5px !important;
+  }
+  .slider .sub-title{
+    padding: 0px 0px 0px 43px;
+  }
+  .slider-content> .btn {
+    padding: 7px 5px;
+    margin-left: 20px;
+  }
+  .footer-links a{
+    display: none;
+  }
+  .copyright{
+    font-size: 10px;
+    margin-right: 60px;
+    padding-left: 1px !important;
+  }
 }
 .accessory:hover{
   .accessory-content{
@@ -288,8 +348,8 @@ body{
   border-radius: 4px;
 }
 .brand img{
-  width: 200px;
-  height: 200px;
+  width: 237px;
+  height: 264px;
   border-radius: 7px;
   transition: transform 0.5s;
 }
